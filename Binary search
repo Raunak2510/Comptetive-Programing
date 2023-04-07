@@ -1,1 +1,41 @@
+#include<bits/stdc++.h>
+#include <algorithm>
+#define INF 1000000000000000000
+#define ll long long int 
+#define mod 998244353
+using namespace std;
+ 
 
+ //rurrr
+int main(){
+    int n;
+    cin>>n;
+  vector<int > v;
+  for(int i=0; i<n; i++){
+    int x;
+    cin>>x;
+    v.push_back(x);
+  }
+  int to_find;
+  cin>>to_find;
+  int lo=0; int hi=n;
+  int mid;
+  while(hi-lo>1){
+    mid=(hi+lo)/2;
+    if(v[mid]>to_find){
+      hi=mid-1;
+    } else{
+      lo=mid;
+    }
+  }
+  if(to_find==v[lo]){
+    cout<<lo<<endl;
+  } else if(to_find==v[hi]){
+     cout<<hi<<endl;
+  } else{
+    cout<<"NOT FOUND"<<endl;
+  }
+ 
+  
+  return 0;
+}
