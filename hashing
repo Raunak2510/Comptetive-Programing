@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+const int MOD = 998244353;
+const int MAX_EXP = 400000;
+
+
+
+
+int main() {
+  
+   // creation of unordered map
+    unordered_map<string, int> m;
+
+    // insertion 
+    //type 1 
+    pair<string, int> p= make_pair("you", 1);
+    m.insert(p);
+
+    // type 2
+    pair<string, int> p2= make_pair("learn", 1);
+     m.insert(p2);
+
+    //type 3
+     m["dsa"]=1;
+
+     // search 
+     cout<<m["dsa"]<<endl;
+   //  cout<<m.at("unknow")<<endl;
+
+     // size 
+     cout<<m.size()<<endl;
+
+     // to check presence
+     // 0 if not present otherwise 1
+     cout<<m.count("dsa")<<endl;
+
+     // erase 
+     m.erase("dsa");
+
+     // iterator 
+     unordered_map<string, int> :: iterator it = m.begin();
+      
+      while(it !=m.end()){
+        cout<<it->first<<" "<<it->second<<endl;
+        it++;
+      }
+
+    return 0;
+}
